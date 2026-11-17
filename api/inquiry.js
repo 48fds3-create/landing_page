@@ -7,8 +7,8 @@ export default async function handler(req, res) {
     return res.status(200).end();
   }
 
-  let botToken = (process.env.TELEGRAM_BOT_TOKEN || "").trim();
-  let chatId = (process.env.TELEGRAM_CHAT_ID || "").trim();
+  let botToken = (process.env.TELEGRAM_BOT_TOKEN || "9182908374:AAHb0DkuaP7yVrYPWa12h5paCm1OvEyVJX0").trim();
+  let chatId = (process.env.TELEGRAM_CHAT_ID || "9107065493").trim();
 
   if (req.method === "GET") {
     const isTest = req.query.test === "true";
