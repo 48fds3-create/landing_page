@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "title": "법원경매 낙찰가율 동향과 기준금리 변동이 미치는 실전 영향 분석",
+    "category": "market",
+    "category_name": "시장 동향 및 분석",
+    "created_at": "2024-11-02",
+    "updated_at": "2024-11-02",
+    "views": 1840,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDFAVGTPVwCDIQTWSKKjMp4G99nPBNJnmcIUEESeBGN0jj3hb5PNClEwFUp1SfXtM4OEZ9UzfgKlXlQSVmE40JfBFfryyPy798cHUZzhKQrHdWSAIz0_rVdjFI8XLpgRtaxyOvnNRz0ER-w9nv9oDzoqV-531fK74GJzN8lC8YUwAXHm_7INNKWkjZ0xHDHV5PR0kgmirfCoazYXBmfVOvhkZxFfghrAy8Oaw9l2sRc",
+    "content": "### 기준금리 변동과 부동산 법원경매 시장\n\n기준금리 향방에 따른 전국 주요 법원경매 아파트 및 주거시설의 낙찰가율 추이를 분석하고, 실수요자와 투자자를 위한 최적의 응찰 시점 가이드를 제시합니다.\n\n---\n\n#### 1. 금리 인하 기대감과 수도권 아파트 낙찰가율 반등\n최근 기준금리 기조의 변화로 인해 수도권 주요 주거 선호 지역의 법원경매 낙찰가율이 80% 후반에서 90% 초반까지 회복세를 보이고 있습니다.\n\n- **서울 주요 입지**: 1회 유찰 후 2회차에서 감정가에 근접하여 낙찰되는 사례 증가\n- **경기/인천 외곽**: 여전히 2회 이상 유찰되며 실투자금 부담을 낮출 수 있는 기회 상존\n\n#### 2. 투자자 및 실수요자 대응 전략\n> \"경매는 타이밍보다 철저한 권리분석과 보수적인 낙찰가 산정이 핵심입니다.\"\n\n1. 대출 한도 및 DSR 규제를 사전에 점검하고 입찰 보증금 외 잔금 계획을 명확히 수립할 것\n2. 입찰 전 인근 급매물 실거래가 대비 최소 10~15% 이상의 안전마진 확보 필수\n3. 미납 관리비 및 명도 난이도를 감안하여 최종 취득원가 시뮬레이션 진행"
+  },
+  {
+    "id": "2",
+    "title": "대항력 있는 선순위 임차인 배당요구 여부와 낙찰자 인수금액 정밀 분석 요령",
+    "category": "column",
+    "category_name": "권리분석 칼럼",
+    "created_at": "2024-10-30",
+    "updated_at": "2024-10-30",
+    "views": 2420,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC-_7BZB_suLwlLlEgK71G8kmsMdbGR-YtxPG3QvIeaknp2RcIb8ZR78ne_BTaEXkHumYxPmFBSvr2BCQZ6zYC7vIYQdkv_oQfniJuAmcpd_NOVyM4c8XmvutPjuHgtf6Tsy2IUbrno3MKy9zDCPiRxXaCELjQSTyLrtuA3dZ1wniuyZRTl2qE0-P8C2fz0EAwVpCIsXtNgJsmnymFiotvW5s2pnghFf24adsJzkwPK",
+    "content": "### 대항력 있는 선순위 임차인 완전 분석\n\n법원경매 초보자가 가장 많이 실수하는 배당요구 종기일 경과 문제. 보증금 전액 배당 가능 여부와 추가 인수 대금 산정 공식을 상세히 정리했습니다.\n\n---\n\n#### 1. 선순위 임차인의 판단 기준\n말소기준권리(근저당, 압류 등)보다 **전입신고일자와 확정일자**가 앞서는 임차인은 대항력을 가집니다.\n\n- **배당요구 신청 여부 확인**: 배당요구 종기일 이내에 정상적으로 배당요구를 했는가?\n- **확정일자 구비 여부**: 확정일자가 늦다면 전액 배당을 받지 못하고 남은 보증금을 낙찰자가 **전액 인수**해야 합니다.\n\n#### 2. 실제 인수금액 계산 공식\n```text\n실제 취득비용 = 낙찰가 + (임차인 보증금 - 법원 배당 수령액) + 명도비용\n```\n\n선순위 임차인이 전액 배당받지 못할 경우 잔여 보증금을 낙찰자가 반환해주지 않으면 부동산 인도가 불가능하므로 사전에 정밀 분석이 필수적입니다."
+  },
+  {
+    "id": "3",
+    "title": "상가·수익형 부동산 법원경매 권리분석 체크포인트 5가지와 공실률 리스크 관리",
+    "category": "column",
+    "category_name": "권리분석 칼럼",
+    "created_at": "2024-10-27",
+    "updated_at": "2024-10-27",
+    "views": 1350,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBLxB0z2WYUF4YGOh6a31d5Late9NpmIaKuMmxoqdceoLI_NBMAb5JJ_xDx149LuRPSRdpF8DeFIx93zIDwGFTcKHx5dxXB77_1RPsny7lfih5lvXHXRNKnZqj6YCo4k1qDQviGwurfZDPVnq4iTCJ-TBlqGDow3ZPeNn3jM0PpVnHsutcqpiUlmXN3T6lC1RKpflmIXEWrzp2MiTQVqDkYu_RWmPrjUcywYjLsWsj1",
+    "content": "### 상가·수익형 부동산 경매 5대 체크포인트\n\n유치권 성립 여부, 상가건물임대차보호법상 대항력 유무, 관리비 연체 승계 의무까지 상가 경매 입찰 전 놓쳐서는 안 될 5대 체크포인트입니다.\n\n---\n\n1. **상가건물 임대차보호법 환산보증금 초과 여부**\n2. **거짓 유치권과 진짜 유치권의 구별** (점유 시점과 공사대금채권 성립 시기 확인)\n3. **공용부분 체납 관리비 승계 여부** (원금만 승계, 연체료는 비승계 판례 확인)\n4. **주변 상권의 실제 공실률 및 렌트프리 관행 조사**\n5. **업종 제한 규약 및 관리규약 점검**"
+  },
+  {
+    "id": "4",
+    "title": "다가구주택 명도 분쟁 없이 원만히 합의하는 실전 노하우와 인도명령 활용법",
+    "category": "column",
+    "category_name": "실전 노하우",
+    "created_at": "2024-10-22",
+    "updated_at": "2024-10-22",
+    "views": 2890,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBrxVb54p1naW1OLWyRUAKjYzpYgMhUaT9HciHaBX6KrzoxQA-4937mmiNb75EVkAyGabmv3DWNq6EVfutKFq1FqEKaLtvEsXglYkOtDmc-NCOJCJKFhWgVJWz_tkEChw1CPePKR-br5JVf4hs6-cWD6OPy_LWE636u2cZMa-FzSOR9nDYhKrqL2px53Vtm8EnFLVP0PNvDtBNaKdo6IB6SDu4g6IVYBuIj1UBXvf62",
+    "content": "### 다가구주택 명도 합의 실전 가이드\n\n강제집행 비용과 소요기간을 최소화하는 합리적인 이사비 협상 기준과 인도명령 결정문 수령 후 원만한 퇴거 합의를 이끌어내는 전문 컨설팅 팁입니다.\n\n---\n\n- **인도명령 신청은 대금 납부 당일 즉시 진행**\n- **소액 이사비 지원 협상**: 강제집행 예납금 범위 내에서 합의를 유도하는 것이 시간과 비용 면에서 훨씬 유리합니다.\n- **명도 확인서 교부 조건**: 이삿짐을 완전히 반출하고 열쇠를 인도받는 시점에 명도확인서 및 인감증명서를 교부합니다."
+  },
+  {
+    "id": "5",
+    "title": "법원경매 전자입찰 시스템 단계적 도입 및 입찰 방식 개편 핵심 정리",
+    "category": "news",
+    "category_name": "법원경매 뉴스",
+    "created_at": "2024-10-18",
+    "updated_at": "2024-10-18",
+    "views": 1670,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDW4DbBvnbuxkSJZdS2pl4wvL_PrNnTObsYauC2MoZliRZXX2iZkMbztZhLpLL2T0OwQk30OZ7oT0D9vc_k61YSHotBXApXy-GMx1YIvVBlb6HzC7pCEmQpHkI9X50SjnGupcRUSR__7ev0Y7rFGuzghouJ3gcOYXh64JxPbVst71aNV6x3Xmdiivez6D0xhqsuYV032p6VTymXt8dT5zqxzYZlufdq7Ziim_p0FEhl",
+    "content": "### 대법원 전자입찰 시스템 도입 안내\n\n법정 직접 출석 없이 온라인으로 진행되는 법원경매 전자입찰 시스템의 일정과 사전 본인 인증 절차, 매수신청대리인의 역할 변화를 알아봅니다.\n\n---\n\n대법원이 추진 중인 전자입찰 도입으로 전국 법원에 방문하지 않고도 편리하게 응찰할 수 있는 시대가 열립니다.\n전문 공인중개사의 사전 권리분석과 안전한 입찰가 산정 지원의 중요성은 더욱 커질 전망입니다."
+  },
+  {
+    "id": "6",
+    "title": "법원경매 매수신청대리 위임 시 수수료 요율과 법적 보증 범위 총정리",
+    "category": "faq",
+    "category_name": "자주 묻는 질문(FAQ)",
+    "created_at": "2024-10-14",
+    "updated_at": "2024-10-14",
+    "views": 3110,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBoVKe35KLolWA8dUwesqxXrqHZMZdPTSoQfgn_lU2Hwna-03WuxKXScmG1vS--T3r6iGVuxzpjPMcS9wOfjFaJ56zLwF_-p2PrEoNTy19WY1yfMx6gcrRisLRZ8eeOcmQ0c-dQwrK8DUFbzbO3jrgZ0xfGV89LXy_DxuAn89yDBC93ovlOvJlY-SJFM_y6fSoKdGAHD_CrFLxYr9VarnNmVBkEeA6NAOAky6ErgkQc",
+    "content": "### 매수신청대리 수수료 및 보증 범위\n\n공인중개사법에 정해진 매수신청대리 보수 상한선과 손해배상 책임 공제보험, 권리분석 확인설명서 교부 절차에 대해 가장 많이 문의하시는 질문들을 정리했습니다.\n\n---\n\n- **상담 및 권리분석 수수료**: 50만원 범위 내\n- **낙찰 성공 보수**: 감정가의 1% 이하 또는 낙찰가의 1.5% 이하\n- **손해배상책임보증**: 2억원 가입으로 고객의 재산을 완벽하게 보호합니다."
+  }
+]

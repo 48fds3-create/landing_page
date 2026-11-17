@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>부동산 법원경매 소식 &amp; 뉴스 | 플러스 공인중개사 사무소</title>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "naver-green": "#03c75a",
+            "naver-green-dark": "#02b150",
+            "naver-green-light": "#e8f7ee",
+            "search-link": "#0c43b7",
+            "search-muted": "#8c8c8c",
+            "portal-ink": "#1c1c1c",
+            "portal-border": "#e4e8eb",
+            "portal-bg": "#f4f6f8",
+            "surface-card": "#ffffff"
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif]
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-[#f7f9fa] text-portal-ink font-sans antialiased pb-16 md:pb-0">
+  <header class="sticky top-0 w-full z-50 bg-white border-b border-portal-border shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between py-3">
+      <a class="flex items-center gap-3 group" href="index.html">
+        <img src="profile.png" alt="플러스 공인중개사" class="w-11 h-11 object-contain rounded-full shadow-sm group-hover:scale-105 transition-transform"/>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="text-xl font-bold text-portal-ink tracking-tight">플러스 공인중개사 사무소</span>
+            <span class="bg-naver-green-light text-naver-green text-[11px] font-semibold px-2 py-0.5 rounded">공식</span>
+          </div>
+          <span class="text-xs text-search-muted font-normal">경매컨설팅 · 매수대리 전문</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1">
+        <a class="text-[15px] font-medium text-gray-700 hover:text-naver-green hover:bg-gray-50 px-4 py-2 rounded-md transition-colors" href="index.html">홈</a>
+        <a class="text-[15px] font-medium text-gray-700 hover:text-naver-green hover:bg-gray-50 px-4 py-2 rounded-md transition-colors" href="index.html#case-section">경매 물건 안내</a>
+        <a aria-current="page" class="text-[15px] font-bold text-naver-green bg-naver-green-light px-4 py-2 rounded-md transition-colors border-b-2 border-naver-green" href="news.html">경매 소식 &amp; 뉴스</a>
+        <a class="text-[15px] font-medium text-gray-700 hover:text-naver-green hover:bg-gray-50 px-4 py-2 rounded-md transition-colors" href="index.html#consultation-form">전화상담문의</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a class="min-h-[44px] inline-flex items-center gap-2 bg-naver-green hover:bg-naver-green-dark text-white font-semibold text-sm px-4 py-2.5 rounded-lg shadow-sm transition-all" href="tel:032-462-7262">
+          <span class="material-symbols-outlined text-[18px]">call</span>
+          <span class="hidden sm:inline">직통상담</span>
+          <span class="font-bold tracking-tight">032-462-7262</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full">
+    <section class="bg-white border-b border-portal-border py-9 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-naver-green"></span>
+            <span class="text-xs font-bold text-naver-green tracking-wide">PLUSAUCTION INSIGHT</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-portal-ink tracking-tight">부동산 법원경매 소식 &amp; 뉴스</h1>
+          <p class="text-sm sm:text-base text-search-muted mt-2">실전 투자자들을 위한 법원경매 최신 정보와 권리분석 핵심 가이드를 신속하고 정확하게 전해드립니다.</p>
+        </div>
+        <div class="bg-gradient-to-r from-emerald-50 to-green-50/70 border border-naver-green/30 rounded-xl p-4 md:max-w-md w-full shadow-sm flex items-start gap-3">
+          <div class="w-8 h-8 rounded-full bg-naver-green text-white flex items-center justify-center shrink-0 mt-0.5">
+            <span class="material-symbols-outlined text-[18px]">campaign</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="bg-red-500 text-white text-[11px] font-bold px-1.5 py-0.5 rounded">필독</span>
+              <span class="text-xs font-semibold text-gray-700">법원경매 최신 속보</span>
+            </div>
+            <p id="top-highlight-title" class="text-sm font-bold text-gray-900 mt-1 line-clamp-1 hover:text-search-link cursor-pointer">
+              2024년 하반기 법원경매 입찰 보증금 규정 및 매수대리 필수 체크리스트
+            </p>
+            <div class="mt-1 flex items-center gap-2 text-xs text-search-muted">
+              <span>오늘 업데이트</span>
+              <span>•</span>
+              <a id="top-highlight-link" href="#" class="text-search-link font-medium hover:underline">상세보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div class="max-w-3xl mx-auto mb-8">
+        <div class="relative flex items-center rounded-lg border-2 border-naver-green bg-white shadow-[0_2px_8px_rgba(3,199,90,0.12)] p-1 focus-within:ring-2 focus-within:ring-naver-green/40 transition-all">
+          <div class="pl-3.5 pr-2 text-naver-green flex items-center justify-center">
+            <span class="material-symbols-outlined text-2xl font-bold">search</span>
+          </div>
+          <input class="w-full py-2.5 px-2 text-base text-gray-900 placeholder:text-gray-400 bg-transparent border-none focus:outline-none focus:ring-0" id="search-input" placeholder="경매 소식 및 칼럼 검색 (예: 대항력, 낙찰가율, 권리분석, 명도)" type="text"/>
+          <button id="search-btn" class="min-h-[44px] bg-naver-green hover:bg-naver-green-dark text-white font-bold text-sm px-6 py-2.5 rounded-md transition-colors shrink-0">
+            검색
+          </button>
+        </div>
+      </div>
+
+      <div class="border-b border-portal-border mb-8 overflow-x-auto scrollbar-none">
+        <div class="flex items-center gap-1 sm:gap-2 pb-px min-w-max">
+          <button class="cat-tab min-h-[44px] font-bold text-[15px] px-4 py-3 border-b-2 border-naver-green text-naver-green transition-all" onclick="filterCategory('all', this)">
+            전체
+          </button>
+          <button class="cat-tab min-h-[44px] font-medium text-[15px] px-4 py-3 border-b-2 border-transparent text-gray-600 hover:text-portal-ink transition-all" onclick="filterCategory('news', this)">
+            법원경매 뉴스
+          </button>
+          <button class="cat-tab min-h-[44px] font-medium text-[15px] px-4 py-3 border-b-2 border-transparent text-gray-600 hover:text-portal-ink transition-all" onclick="filterCategory('market', this)">
+            시장 동향 및 분석
+          </button>
+          <button class="cat-tab min-h-[44px] font-medium text-[15px] px-4 py-3 border-b-2 border-transparent text-gray-600 hover:text-portal-ink transition-all" onclick="filterCategory('column', this)">
+            경매 상식 &amp; 권리분석 칼럼
+          </button>
+          <button class="cat-tab min-h-[44px] font-medium text-[15px] px-4 py-3 border-b-2 border-transparent text-gray-600 hover:text-portal-ink transition-all" onclick="filterCategory('faq', this)">
+            자주 묻는 질문(FAQ)
+          </button>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mb-6">
+        <p class="text-sm text-gray-600">
+          총 <span class="font-bold text-naver-green" id="postCount">0</span>개의 부동산 법원경매 아티클
+        </p>
+        <div class="flex items-center gap-2 text-xs text-search-muted">
+          <button id="sort-latest-btn" class="font-bold text-portal-ink">최신순</button>
+          <span>|</span>
+          <button id="sort-views-btn" class="hover:text-portal-ink">조회순</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" id="news-list"></div>
+    </section>
+
+    <section class="w-full bg-naver-green py-12 px-4 sm:px-6 lg:px-8 text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+        <div>
+          <div class="inline-flex items-center gap-1.5 bg-black/15 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
+            <span class="material-symbols-outlined text-sm">support_agent</span>
+            <span>법원경매 전문가 1:1 맞춤 상담</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">경매 사건별 상세 권리분석이 필요하신가요?</h2>
+          <p class="text-green-50 text-sm sm:text-base mt-2">권리상 하자 분석부터 현장 시세조사, 입찰가 산정, 명도 계획까지 원스톱으로 지원합니다.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+          <a class="min-h-[44px] flex items-center gap-3 bg-white text-portal-ink hover:bg-gray-50 px-6 py-4 rounded-xl shadow-lg font-bold text-lg transition-transform hover:scale-105" href="tel:032-462-7262">
+            <span class="material-symbols-outlined text-naver-green text-2xl">call</span>
+            <div class="text-left">
+              <span class="text-[11px] block text-gray-500 font-medium">직통 유선전화 상담</span>
+              <span class="text-xl font-extrabold text-portal-ink tracking-tight">032-462-7262</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full bg-white border-t border-portal-border py-10 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-600">
+      <div class="flex flex-col gap-2 text-center md:text-left">
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+          <img src="profile.png" alt="플러스 공인중개사" class="w-7 h-7 rounded-full object-contain shadow-sm"/>
+          <span class="font-bold text-portal-ink text-base">플러스 공인중개사 사무소</span>
+          <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded font-medium">전국 부동산 법원경매 매수대리 등록업체</span>
+        </div>
+        <div class="text-xs text-search-muted flex flex-wrap justify-center md:justify-start items-center gap-x-4 gap-y-1">
+          <span>대표전화: <strong class="text-portal-ink">032-462-7262</strong></span>
+          <span>업무분야: 전국 부동산 법원경매 권리분석, 현장조사 및 입찰 매수신청대리</span>
+        </div>
+        <p class="text-xs text-search-muted">© 2024 플러스 공인중개사 사무소. All rights reserved.</p>
+      </div>
+      <div class="flex items-center gap-4 text-xs text-gray-500">
+        <a id="agent-login-btn" href="admin.html" class="hover:text-naver-green transition-colors">Agent Login</a>
+        <span>|</span>
+        <a class="hover:text-naver-green transition-colors" href="tel:032-462-7262">상담전화 연결</a>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-[#e5e5e5] z-50 flex items-center justify-around py-2 px-3 shadow-lg">
+    <a href="index.html" class="flex flex-col items-center gap-1 text-gray-500 hover:text-naver-green text-xs font-semibold py-1">
+      <span class="material-symbols-outlined text-xl">home</span>
+      <span>홈</span>
+    </a>
+    <a href="news.html" class="flex flex-col items-center gap-1 text-naver-green text-xs font-semibold py-1">
+      <span class="material-symbols-outlined text-xl">newspaper</span>
+      <span>경매소식</span>
+    </a>
+    <a href="tel:032-462-7262" class="flex flex-col items-center gap-1 text-gray-500 hover:text-naver-green text-xs font-semibold py-1">
+      <span class="material-symbols-outlined text-xl">call</span>
+      <span>전화상담</span>
+    </a>
+    <a href="admin.html" class="flex flex-col items-center gap-1 text-gray-500 hover:text-naver-green text-xs font-semibold py-1">
+      <span class="material-symbols-outlined text-xl">lock</span>
+      <span>관리자</span>
+    </a>
+  </nav>
+
+  <script src="db.js"></script>
+  <script>
+    let allPosts = [];
+    let currentCategory = 'all';
+    let currentSearch = '';
+    let currentSort = 'latest';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      allPosts = await getPosts();
+      if (allPosts.length > 0) {
+        const top = allPosts[0];
+        document.getElementById('top-highlight-title').innerText = top.title;
+        document.getElementById('top-highlight-link').href = `news-detail.html?id=${top.id}`;
+      }
+      renderArticles();
+
+      document.getElementById('search-input').addEventListener('input', (e) => {
+        currentSearch = e.target.value.trim().toLowerCase();
+        renderArticles();
+      });
+
+      document.getElementById('sort-latest-btn').addEventListener('click', () => {
+        currentSort = 'latest';
+        document.getElementById('sort-latest-btn').classList.add('font-bold', 'text-portal-ink');
+        document.getElementById('sort-latest-btn').classList.remove('hover:text-portal-ink');
+        document.getElementById('sort-views-btn').classList.remove('font-bold', 'text-portal-ink');
+        renderArticles();
+      });
+
+      document.getElementById('sort-views-btn').addEventListener('click', () => {
+        currentSort = 'views';
+        document.getElementById('sort-views-btn').classList.add('font-bold', 'text-portal-ink');
+        document.getElementById('sort-views-btn').classList.remove('hover:text-portal-ink');
+        document.getElementById('sort-latest-btn').classList.remove('font-bold', 'text-portal-ink');
+        renderArticles();
+      });
+    });
+
+    function filterCategory(category, clickedBtn) {
+      currentCategory = category;
+      const tabs = document.querySelectorAll('.cat-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('border-naver-green', 'text-naver-green', 'font-bold');
+        tab.classList.add('border-transparent', 'text-gray-600', 'font-medium');
+      });
+      clickedBtn.classList.remove('border-transparent', 'text-gray-600', 'font-medium');
+      clickedBtn.classList.add('border-naver-green', 'text-naver-green', 'font-bold');
+      renderArticles();
+    }
+
+    function renderArticles() {
+      const container = document.getElementById('news-list');
+      let filtered = allPosts.filter(p => {
+        const matchCat = currentCategory === 'all' || p.category === currentCategory;
+        const matchSearch = !currentSearch ||
+          (p.title && p.title.toLowerCase().includes(currentSearch)) ||
+          (p.content && p.content.toLowerCase().includes(currentSearch));
+        return matchCat && matchSearch;
+      });
+
+      if (currentSort === 'views') {
+        filtered.sort((a, b) => (b.views || 0) - (a.views || 0));
+      } else {
+        filtered.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
+      }
+
+      document.getElementById('postCount').innerText = filtered.length;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-16 text-center text-gray-500">
+            <span class="material-symbols-outlined text-4xl text-gray-300 mb-2">search_off</span>
+            <p class="text-base font-semibold">검색 조건에 맞는 게시글이 없습니다.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(post => {
+        const summary = markdownToText(post.content || '').slice(0, 85) + '...';
+        const categoryName = post.category_name || (post.category === 'market' ? '시장 동향 및 분석' : post.category === 'column' ? '권리분석 칼럼' : post.category === 'faq' ? '자주 묻는 질문' : '법원경매 뉴스');
+        const badgeColor = post.category === 'column' ? 'bg-blue-600' : post.category === 'faq' ? 'bg-amber-500' : 'bg-naver-green';
+        const thumb = post.image || 'profile.png';
+        const views = post.views || Math.floor(Math.random() * 800 + 400);
+
+        return `
+          <article class="bg-white rounded-xl overflow-hidden border border-portal-border hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="h-48 overflow-hidden relative bg-gray-100">
+                <img alt="${escapeHtml(post.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${thumb}"/>
+                <span class="absolute top-3 left-3 ${badgeColor} text-white text-xs font-bold px-2.5 py-1 rounded shadow-sm">${escapeHtml(categoryName)}</span>
+              </div>
+              <div class="p-5">
+                <a class="block group-hover:text-search-link transition-colors" href="news-detail.html?id=${post.id}">
+                  <h2 class="text-lg font-bold text-portal-ink line-clamp-2 leading-snug">${escapeHtml(post.title)}</h2>
+                </a>
+                <p class="text-sm text-gray-600 mt-2.5 line-clamp-2 leading-relaxed">
+                  ${escapeHtml(summary)}
+                </p>
+              </div>
+            </div>
+            <div class="px-5 pb-4 pt-3 flex items-center justify-between text-xs text-search-muted border-t border-gray-100">
+              <span class="font-medium text-gray-500">${post.created_at || ''}</span>
+              <div class="flex items-center gap-3">
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">visibility</span> ${views.toLocaleString()}</span>
+                <a href="news-detail.html?id=${post.id}" class="text-search-link font-medium hover:underline cursor-pointer">원문보기</a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+  </script>
+</body>
+</html>

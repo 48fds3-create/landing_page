@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>게시글 작성 및 수정 | 관리자</title>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "naver-green": "#03c75a",
+            "naver-green-dark": "#02b150",
+            "naver-green-light": "#e8f7ee",
+            "portal-ink": "#1c1c1c",
+            "portal-border": "#e4e8eb"
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif]
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-[#f7f9fa] text-portal-ink font-sans min-h-screen pb-24">
+  <script src="db.js"></script>
+  <script>
+    requireAdmin();
+  </script>
+
+  <header class="sticky top-0 w-full z-50 bg-white border-b border-portal-border shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="admin.html" class="min-h-[44px] min-w-[44px] flex items-center text-gray-500 hover:text-portal-ink">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </a>
+        <h1 id="page-heading" class="text-lg font-bold text-portal-ink">새 게시글 작성</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="admin.html" class="min-h-[44px] px-4 py-2 text-sm font-semibold text-gray-600 hover:bg-gray-100 rounded-lg inline-flex items-center">
+          취소
+        </a>
+        <button id="submit-btn" class="min-h-[44px] bg-naver-green hover:bg-naver-green-dark text-white px-5 py-2 rounded-lg font-bold text-sm shadow-sm transition-all inline-flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[18px]">save</span>
+          <span id="btn-label">저장하기</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <form id="post-form" class="bg-white rounded-2xl border border-portal-border p-6 sm:p-8 shadow-sm flex flex-col gap-6">
+      <input type="hidden" id="post-id"/>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm font-bold text-portal-ink">게시글 제목 *</label>
+        <input id="post-title" required class="w-full bg-[#f7f9fa] border border-portal-border rounded-xl px-4 py-3 text-base font-medium focus:outline-none focus:border-naver-green focus:ring-1 focus:ring-naver-green transition-all" placeholder="제목을 입력하세요"/>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-bold text-portal-ink">카테고리 *</label>
+          <select id="post-category" required class="bg-[#f7f9fa] border border-portal-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-naver-green focus:ring-1 focus:ring-naver-green transition-all">
+            <option value="news">법원경매 뉴스</option>
+            <option value="market">시장 동향 및 분석</option>
+            <option value="column">경매 상식 &amp; 권리분석 칼럼</option>
+            <option value="faq">자주 묻는 질문(FAQ)</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-bold text-portal-ink">대표 이미지 URL (선택사항)</label>
+          <input id="post-image" class="bg-[#f7f9fa] border border-portal-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-naver-green focus:ring-1 focus:ring-naver-green transition-all" placeholder="https://... 또는 비워두면 기본 로고 적용"/>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center justify-between">
+          <label class="text-sm font-bold text-portal-ink">본문 내용 (마크다운 지원) *</label>
+          <div class="flex items-center gap-1 text-xs">
+            <button type="button" id="tab-write" class="px-3 py-1 font-bold bg-naver-green text-white rounded">작성</button>
+            <button type="button" id="tab-preview" class="px-3 py-1 font-medium bg-gray-100 text-gray-600 hover:text-portal-ink rounded">미리보기</button>
+          </div>
+        </div>
+
+        <div id="editor-wrapper">
+          <textarea id="post-content" required rows="16" class="w-full font-mono text-sm leading-relaxed bg-[#f7f9fa] border border-portal-border rounded-xl p-4 focus:outline-none focus:border-naver-green focus:ring-1 focus:ring-naver-green transition-all" placeholder="# 제목\n\n본문 내용을 마크다운으로 작성하세요.\n\n- 목록 항목 1\n- 목록 항목 2\n\n> 강조 인용구"></textarea>
+        </div>
+
+        <div id="preview-wrapper" class="hidden min-h-[380px] p-6 bg-white border border-portal-border rounded-xl"></div>
+      </div>
+
+      <div class="pt-4 border-t border-portal-border flex justify-end">
+        <button type="submit" class="min-h-[44px] bg-naver-green hover:bg-naver-green-dark text-white px-8 py-3 rounded-xl font-bold text-base shadow-sm transition-all flex items-center gap-2">
+          <span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+          <span>저장 및 GitHub 동기화</span>
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    let isEditing = false;
+    const catMap = {
+      'news': '법원경매 뉴스',
+      'market': '시장 동향 및 분석',
+      'column': '경매 상식 & 권리분석 칼럼',
+      'faq': '자주 묻는 질문(FAQ)'
+    };
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const postId = urlParams.get('id');
+
+      if (postId) {
+        isEditing = true;
+        document.getElementById('page-heading').innerText = '게시글 수정';
+        document.getElementById('btn-label').innerText = '수정 완료';
+        const post = await getPost(postId);
+        if (post) {
+          document.getElementById('post-id').value = post.id;
+          document.getElementById('post-title').value = post.title || '';
+          document.getElementById('post-category').value = post.category || 'news';
+          document.getElementById('post-image').value = post.image || '';
+          document.getElementById('post-content').value = post.content || '';
+        }
+      }
+
+      const tabWrite = document.getElementById('tab-write');
+      const tabPreview = document.getElementById('tab-preview');
+      const editorWrapper = document.getElementById('editor-wrapper');
+      const previewWrapper = document.getElementById('preview-wrapper');
+
+      tabWrite.addEventListener('click', () => {
+        tabWrite.className = 'px-3 py-1 font-bold bg-naver-green text-white rounded';
+        tabPreview.className = 'px-3 py-1 font-medium bg-gray-100 text-gray-600 hover:text-portal-ink rounded';
+        editorWrapper.classList.remove('hidden');
+        previewWrapper.classList.add('hidden');
+      });
+
+      tabPreview.addEventListener('click', () => {
+        tabPreview.className = 'px-3 py-1 font-bold bg-naver-green text-white rounded';
+        tabWrite.className = 'px-3 py-1 font-medium bg-gray-100 text-gray-600 hover:text-portal-ink rounded';
+        const rawContent = document.getElementById('post-content').value;
+        previewWrapper.innerHTML = renderMarkdown(rawContent);
+        editorWrapper.classList.add('hidden');
+        previewWrapper.classList.remove('hidden');
+      });
+
+      document.getElementById('submit-btn').addEventListener('click', () => {
+        document.getElementById('post-form').requestSubmit();
+      });
+
+      document.getElementById('post-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('submit-btn');
+        btn.disabled = true;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> 저장 중...';
+
+        const id = document.getElementById('post-id').value;
+        const title = document.getElementById('post-title').value.trim();
+        const category = document.getElementById('post-category').value;
+        const image = document.getElementById('post-image').value.trim();
+        const content = document.getElementById('post-content').value;
+
+        const postData = {
+          title,
+          category,
+          category_name: catMap[category] || '뉴스',
+          content,
+          image: image || 'profile.png'
+        };
+        if (id) postData.id = id;
+
+        try {
+          await savePost(postData);
+          alert('게시글이 성공적으로 저장되었습니다!');
+          window.location.href = 'admin.html';
+        } catch (err) {
+          alert('저장 실패: ' + err.message);
+          btn.disabled = false;
+          btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">save</span> <span id="btn-label">' + (isEditing ? '수정 완료' : '저장하기') + '</span>';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

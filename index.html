@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>플러스 공인중개사 사무소 - 전국 부동산 법원경매·매수대리 전문</title>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed-variant": "#005321",
+            "surface-container-low": "#f4f6f8",
+            "surface": "#f7f9fa",
+            "search-link": "#0c43b7",
+            "inverse-primary": "#3ee271",
+            "search-muted": "#8c8c8c",
+            "login-fill": "#03a94d",
+            "secondary-fixed": "#d8e2ff",
+            "corporate-ink": "#1a1d24",
+            "primary-container": "#03c75a",
+            "secondary": "#03a94d",
+            "on-surface": "#191c22",
+            "accent-badge": "#e8f7ee",
+            "cta-green": "#03c75a",
+            "on-surface-variant": "#4a5568",
+            "hairline": "#e5e5e5",
+            "portal-ink": "#2e2e2e",
+            "search-ink": "#1c1c1c",
+            "navy-depth": "#0f2c59",
+            "primary": "#03c75a",
+            "primary-dark": "#029e46"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-[#f7f9fa] text-on-surface font-sans antialiased selection:bg-[#03c75a]/20 selection:text-[#005321] pb-16 md:pb-0">
+  <header class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-[#e5e5e5] shadow-sm">
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a class="flex items-center gap-3 group" href="index.html">
+        <img src="profile.png" alt="플러스 공인중개사" class="w-12 h-12 object-contain rounded-full shadow-sm group-hover:scale-105 transition-transform"/>
+        <div class="flex flex-col">
+          <span class="text-base sm:text-lg font-bold text-[#191c22] leading-tight tracking-tight">플러스 공인중개사 사무소</span>
+          <span class="text-xs font-semibold text-[#03a94d]">전국 부동산 경매컨설팅 · 매수대리 전문</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1 bg-[#f4f6f8] p-1.5 rounded-xl border border-[#e5e5e5] text-sm font-semibold">
+        <a aria-current="page" class="px-4 py-2 rounded-lg bg-[#03c75a] text-white shadow-sm transition-all" href="index.html">홈</a>
+        <a class="px-4 py-2 rounded-lg text-[#4a5568] hover:text-[#191c22] hover:bg-white transition-all" href="#case-section">낙찰 성공사례</a>
+        <a class="px-4 py-2 rounded-lg text-[#4a5568] hover:text-[#191c22] hover:bg-white transition-all" href="#services-section">4대 핵심서비스</a>
+        <a class="px-4 py-2 rounded-lg text-[#4a5568] hover:text-[#191c22] hover:bg-white transition-all" href="news.html">경매 소식 &amp; 칼럼</a>
+        <a class="px-4 py-2 rounded-lg text-[#4a5568] hover:text-[#191c22] hover:bg-white transition-all" href="#consultation-form">무료 권리분석 신청</a>
+      </nav>
+      <div class="flex items-center gap-3 sm:gap-4">
+        <div class="hidden lg:flex flex-col text-right">
+          <span class="text-[11px] font-medium text-[#8c8c8c] flex items-center justify-end gap-1">
+            <span class="inline-block w-2 h-2 rounded-full bg-[#03c75a] animate-pulse"></span>실시간 1:1 유선상담 가능
+          </span>
+          <a class="text-base font-bold text-[#191c22] hover:text-[#03c75a] transition-colors" href="tel:032-462-7262">032-462-7262</a>
+        </div>
+        <a class="min-h-[44px] min-w-[44px] bg-[#03c75a] hover:bg-[#029e46] text-white px-4 sm:px-5 py-2.5 rounded-lg text-sm font-bold shadow-md shadow-[#03c75a]/20 transition-all flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98]" href="tel:032-462-7262">
+          <span class="material-symbols-outlined text-[18px]">call</span>
+          <span>전화 상담</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full bg-[#f7f9fa] flex flex-col">
+    <div class="flex flex-col w-full">
+      <section class="relative w-full bg-gradient-to-b from-white via-[#f7f9fa] to-[#edf3f0]/50 border-b border-[#e5e5e5] pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#03c75a_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-6 z-10">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e8f7ee] border border-[#03c75a]/30 text-[#005321] text-xs font-bold shadow-sm">
+            <span class="material-symbols-outlined text-[16px] text-[#03c75a]">verified</span>
+            법원 경매 매수신청대리 공식등록 공인중개사 · 100% 비대면 유선 1:1 맞춤 상담
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#191c22] tracking-tight leading-tight sm:leading-snug">
+            대한민국 부동산 법원 경매의 정답,<br/>
+            <span class="text-[#03c75a] relative inline-block">안전한 권리분석<span class="absolute left-0 bottom-1 w-full h-2.5 bg-[#03c75a]/15 -z-10 rounded"></span></span>과 <span class="text-[#0f2c59]">최적 낙찰가 제안</span>
+          </h1>
+          <p class="text-base sm:text-lg text-[#4a5568] max-w-2xl font-normal leading-relaxed">
+            선순위 임차인, 말소기준권리 위험 인수 없이 시세보다 저렴하게!<br class="hidden sm:inline"/>15년 실전 노하우의 경매 전문 컨설턴트가 1:1 직통 유선으로 꼼꼼히 점검해 드립니다.
+          </p>
+          <div class="w-full max-w-3xl mt-4">
+            <div class="bg-white p-2 rounded-2xl border-2 border-[#03c75a] shadow-[0_8px_30px_rgb(3,199,90,0.12)] flex items-center gap-3 transition-shadow focus-within:shadow-[0_10px_35px_rgb(3,199,90,0.22)]">
+              <div class="pl-3 text-[#03c75a] flex items-center">
+                <span class="material-symbols-outlined text-2xl">search</span>
+              </div>
+              <input id="mainSearchInput" class="w-full py-3 text-base text-[#191c22] placeholder:text-[#8c8c8c] focus:outline-none bg-transparent font-medium border-0 focus:ring-0" placeholder="관심 지역 또는 경매 사건번호 입력 (전국 법원 지원)" type="text"/>
+              <button class="min-h-[44px] bg-[#03c75a] hover:bg-[#029e46] text-white px-6 py-3 rounded-xl font-bold text-sm tracking-wide transition-all shrink-0 flex items-center gap-1.5" onclick="location.href='news.html'">
+                <span>검색 &amp; 분석의뢰</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </button>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-2 mt-3.5">
+              <span class="text-xs font-semibold text-[#8c8c8c] mr-1">추천 검색어:</span>
+              <a class="min-h-[44px] px-3 py-1 rounded-full bg-[#e8f7ee] hover:bg-[#03c75a]/20 text-[#005321] text-xs font-semibold border border-[#03c75a]/30 transition-colors inline-flex items-center gap-1" href="#case-section"><span class="text-[#03c75a]">#</span>수도권 아파트 경매</a>
+              <a class="min-h-[44px] px-3 py-1 rounded-full bg-[#f4f6f8] hover:bg-white text-[#0c43b7] text-xs font-semibold border border-[#e5e5e5] transition-colors inline-flex items-center gap-1" href="#case-section"><span class="text-[#0c43b7]">#</span>수익형 상가/오피스텔</a>
+              <a class="min-h-[44px] px-3 py-1 rounded-full bg-[#f4f6f8] hover:bg-white text-[#0c43b7] text-xs font-semibold border border-[#e5e5e5] transition-colors inline-flex items-center gap-1" href="#case-section"><span class="text-[#0c43b7]">#</span>빌라/다가구 급매물</a>
+              <a class="min-h-[44px] px-3 py-1 rounded-full bg-[#f4f6f8] hover:bg-white text-[#4a5568] text-xs font-semibold border border-[#e5e5e5] transition-colors inline-flex items-center" href="tel:032-462-7262"><span class="text-[#03c75a] font-bold mr-1">●</span> 실시간 권리분석 상담</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl pt-8 mt-4 border-t border-[#e5e5e5]">
+            <div class="bg-white p-4 rounded-xl border border-[#e5e5e5] shadow-sm text-center">
+              <div class="text-2xl lg:text-3xl font-extrabold text-[#03c75a]">98.4%</div>
+              <div class="text-xs font-medium text-[#4a5568] mt-1">고객 만족 및 낙찰 성공률</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-[#e5e5e5] shadow-sm text-center">
+              <div class="text-2xl lg:text-3xl font-extrabold text-[#0f2c59]">1,200건+</div>
+              <div class="text-xs font-medium text-[#4a5568] mt-1">누적 권리분석 및 컨설팅</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-[#e5e5e5] shadow-sm text-center">
+              <div class="text-2xl lg:text-3xl font-extrabold text-[#03c75a]">2억 원</div>
+              <div class="text-xs font-medium text-[#4a5568] mt-1">공인중개사 손해배상책임보증</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-[#e5e5e5] shadow-sm text-center">
+              <div class="text-2xl lg:text-3xl font-extrabold text-[#0f2c59]">100%</div>
+              <div class="text-xs font-medium text-[#4a5568] mt-1">비대면 유선 1:1 맞춤 상담</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full bg-gradient-to-r from-[#03c75a] via-[#02b350] to-[#03a94d] text-white py-10 px-4 sm:px-6 lg:px-8 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4 text-center md:text-left">
+            <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/30 hidden sm:flex">
+              <span class="material-symbols-outlined text-3xl text-white">headset_mic</span>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center justify-center md:justify-start gap-2 mb-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+                <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-0.5 rounded-full text-white">상담원 실시간 즉시 연결</span>
+              </div>
+              <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight">"경매 사건번호만 알려주시면 5분 내 1차 권리분석 무료 제공!"</h2>
+              <p class="text-white/90 text-xs sm:text-sm mt-0.5">별도 방문 없이 전국 어디서나 간편하게 유선(전화)으로 전문 상담을 받으실 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 w-full md:w-auto">
+            <a class="w-full md:w-auto min-h-[44px] bg-white text-[#005321] hover:bg-neutral-50 px-8 py-4 rounded-xl font-extrabold text-lg sm:text-xl flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5" href="tel:032-462-7262">
+              <span class="material-symbols-outlined text-2xl text-[#03c75a]">call</span>
+              <span>032-462-7262</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full py-20 bg-white border-b border-[#e5e5e5] px-4 sm:px-6 lg:px-8" id="board-preview" style="display:none;">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e8f7ee] text-[#005321] text-xs font-bold uppercase tracking-wider">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#03c75a]"></span>Live Updates
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-[#191c22] mt-2">부동산 법원경매 최신 소식</h2>
+              <p class="text-xs sm:text-sm text-[#4a5568] mt-1">실시간 권리분석 핵심 칼럼과 경매 정책 변경사항을 빠르게 만나보세요.</p>
+            </div>
+            <a href="news.html" class="min-h-[44px] inline-flex items-center gap-2 text-sm font-bold text-[#03c75a] hover:text-[#029e46] transition-colors self-start sm:self-auto">
+              <span>전체 게시글 보기</span>
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+          <div id="preview-cards-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        </div>
+      </section>
+
+      <section class="w-full py-20 bg-[#f7f9fa] border-b border-[#e5e5e5] px-4 sm:px-6 lg:px-8" id="services-section">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+          <div class="flex flex-col items-center text-center gap-3 max-w-2xl mx-auto">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e8f7ee] text-[#005321] text-xs font-bold uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#03c75a]"></span>Expertise Solutions
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#191c22]">경매 성공을 이끄는 4대 핵심 서비스</h2>
+            <p class="text-sm sm:text-base text-[#4a5568]">입찰 전 권리분석부터 임장, 법원 입찰대리, 명도 협의까지 원스톱으로 지원합니다.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+            <div class="bg-white p-7 rounded-2xl border border-[#e5e5e5] shadow-sm hover:shadow-xl hover:border-[#03c75a]/50 transition-all flex flex-col justify-between group relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-[#e8f7ee] text-[#03c75a] font-black text-2xl flex items-center justify-center rounded-bl-3xl group-hover:bg-[#03c75a] group-hover:text-white transition-colors">01</div>
+              <div class="flex flex-col gap-4">
+                <div class="w-14 h-14 rounded-xl bg-[#e8f7ee] text-[#03c75a] flex items-center justify-center group-hover:bg-[#03c75a] group-hover:text-white transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-3xl">fact_check</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#191c22] mb-1.5">법원 경매 권리분석</h3>
+                  <p class="text-xs sm:text-sm text-[#4a5568] leading-relaxed">등기부등본 및 매각물건명세서의 인수 권리, 말소기준권리, 대항력 여부를 완벽히 해부합니다.</p>
+                </div>
+              </div>
+              <ul class="flex flex-col gap-1.5 pt-4 mt-6 border-t border-[#e5e5e5] text-xs text-[#4a5568] font-medium">
+                <li class="flex items-center gap-2"><span class="text-[#03c75a] font-bold">✓</span> 선순위 임차인/배당 분석</li>
+                <li class="flex items-center gap-2"><span class="text-[#03c75a] font-bold">✓</span> 숨겨진 유치권·법정지상권 차단</li>
+              </ul>
+            </div>
+            <div class="bg-white p-7 rounded-2xl border border-[#e5e5e5] shadow-sm hover:shadow-xl hover:border-[#03c75a]/50 transition-all flex flex-col justify-between group relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-[#e8f7ee] text-[#03c75a] font-black text-2xl flex items-center justify-center rounded-bl-3xl group-hover:bg-[#03c75a] group-hover:text-white transition-colors">02</div>
+              <div class="flex flex-col gap-4">
+                <div class="w-14 h-14 rounded-xl bg-[#e8f7ee] text-[#03c75a] flex items-center justify-center group-hover:bg-[#03c75a] group-hover:text-white transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-3xl">home_pin</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#191c22] mb-1.5">현장임장 및 시세조사</h3>
+                  <p class="text-xs sm:text-sm text-[#4a5568] leading-relaxed">지역 공인중개사 네트워크와 실거래 빅데이터를 종합하여 실질적인 급매가와 점유 상태를 파악합니다.</p>
+                </div>
+              </div>
+              <ul class="flex flex-col gap-1.5 pt-4 mt-6 border-t border-[#e5e5e5] text-xs text-[#4a5568] font-medium">
+                <li class="flex items-center gap-2"><span class="text-[#03c75a] font-bold">✓</span> 현장 시세 및 관리비 체납 확인</li>
+                <li class="flex items-center gap-2"><span class="text-[#03c75a] font-bold">✓</span> 점유자 현황 및 인근 매수세 조사</li>
+              </ul>
+            </div>
+            <div class="bg-white p-7 rounded-2xl border border-[#e5e5e5] shadow-sm hover:shadow-xl hover:border-[#03c75a]/50 transition-all flex flex-col justify-between group relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-[#e8f7ee] text-[#03c75a] font-black text-2xl flex items-center justify-center rounded-bl-3xl group-hover:bg-[#03c75a] group-hover:text-white transition-colors">03</div>
+              <div class="flex flex-col gap-4">
+                <div class="w-14 h-14 rounded-xl bg-[#e8f7ee] text-[#03c75a] flex items-center justify-center group-hover:bg-[#03c75a] group-hover:text-white transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-3xl">gavel</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#191c22] mb-1.5">입찰대리 및 적정가 산정</h3>
+                  <p class="text-xs sm:text-sm text-[#4a5568] leading-relaxed">수익률을 훼손하지 않으면서 2등과의 격차를 좁혀 안전하게 낙찰받을 수 있는 정밀 입찰가를 제시합니다.</p>
+                </div>
+              </div>
+              <ul class="flex flex-col gap-1.5 pt-4 mt-6 border-t border-[#e5e5e5] text-xs text-[#4a5568] font-medium">
+                <li class="flex items-center gap-2"><span class="text-[#03c75a] font-bold">✓</span> 법원 등록 공인중개사 대리 입찰</li>
+                <li class="flex items-center gap-2"><span class="text-[#03c75a] font-bold">✓</span> 통계 기반 경쟁률·적정가 시뮬레이션</li>
+              </ul>
+            </div>
+            <div class="bg-white p-7 rounded-2xl border border-[#e5e5e5] shadow-sm hover:shadow-xl hover:border-[#03c75a]/50 transition-all flex flex-col justify-between group relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-[#e8f7ee] text-[#03c75a] font-black text-2xl flex items-center justify-center rounded-bl-3xl group-hover:bg-[#03c75a] group-hover:text-white transition-colors">04</div>
+              <div class="flex flex-col gap-4">
+                <div class="w-14 h-14 rounded-xl bg-[#e8f7ee] text-[#03c75a] flex items-center justify-center group-hover:bg-[#03c75a] group-hover:text-white transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-3xl">key</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#191c22] mb-1.5">명도 상담 및 사후관리</h3>
+                  <p class="text-xs sm:text-sm text-[#4a5568] leading-relaxed">낙찰 후 점유자 이사 협의부터 인도명령 신청까지 원만한 합의를 이끌어 신속한 입주를 지원합니다.</p>
+                </div>
+              </div>
+              <ul class="flex flex-col gap-1.5 pt-4 mt-6 border-t border-[#e5e5e5] text-xs text-[#4a5568] font-medium">
+                <li class="flex items-center gap-2"><span class="text-[#03c75a] font-bold">✓</span> 점유이전가처분·인도명령 지원</li>
+                <li class="flex items-center gap-2"><span class="text-[#03c75a] font-bold">✓</span> 원만한 이사비 합의 및 잔금 대출 연계</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full py-20 bg-white border-b border-[#e5e5e5] px-4 sm:px-6 lg:px-8" id="case-section">
+        <div class="max-w-7xl mx-auto flex flex-col gap-12">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="flex flex-col gap-2 max-w-xl">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e8f7ee] text-[#005321] text-xs font-bold uppercase tracking-wider w-fit">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#03c75a]"></span>Proven Track Record
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-[#191c22]">부동산 법원경매 주요 낙찰 성공사례</h2>
+              <p class="text-xs sm:text-sm text-[#4a5568]">철저한 사전 권리분석과 시세분석으로 고객에게 확실한 시세차익을 선사한 실제 사례입니다.</p>
+            </div>
+            <div class="flex items-center gap-2 self-start md:self-auto">
+              <div class="bg-[#f4f6f8] border border-[#e5e5e5] px-4 py-2.5 rounded-xl flex items-center gap-3">
+                <span class="material-symbols-outlined text-[#03c75a] text-2xl">verified_user</span>
+                <div class="flex flex-col">
+                  <span class="text-xs font-bold text-[#191c22]">공인중개사 손해배상 2억원 가입</span>
+                  <span class="text-[11px] text-[#8c8c8c]">100% 안전한 법원 경매 대리 절차</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+              <div class="h-56 bg-cover bg-center relative overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHKvuAxv7X65h0aIU_G1sEkHpBEhoid73LAY59Cvu4dtXa4K0znJotrEch0znaCFPsM6mD9v5TLJWiiXp35VddUsXN1l2DjO58RbF5-iPnpuTDyt4wxLz6TtBy3VLhDKwxbjG3EJGmq0nit-PICpOTI-gEiLgnmoZA7nnYmeYjO9DlE9NqEf_FCrsH0cXRrakG6Ko-pYKEr7AKsa2X9UUPNKAPkS_B6vhhZQ7HcOdb');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute top-3.5 left-3.5 flex gap-2">
+                  <span class="bg-[#03c75a] text-white px-2.5 py-1 rounded-md text-xs font-bold shadow-sm">낙찰 완료</span>
+                  <span class="bg-white/90 backdrop-blur-sm text-[#0f2c59] px-2.5 py-1 rounded-md text-xs font-bold shadow-sm border border-white/40">1회 유찰</span>
+                </div>
+                <div class="absolute top-3.5 right-3.5">
+                  <span class="bg-[#ff4b4b] text-white px-2.5 py-1 rounded-md text-xs font-extrabold shadow-sm">1.3억 원 절감</span>
+                </div>
+                <div class="absolute bottom-3 left-4 right-4 text-white flex justify-between items-center">
+                  <span class="text-xs font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">apartment</span>서울서부지방법원 본원</span>
+                  <span class="text-xs font-bold text-[#67ff8d]">낙찰가율 80%</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-4 flex-1 justify-between">
+                <div class="flex flex-col gap-1.5">
+                  <span class="text-xs font-semibold text-[#0c43b7]">아파트 · 주거용</span>
+                  <h3 class="text-base font-bold text-[#191c22] group-hover:text-[#03c75a] transition-colors leading-snug">서울 마포구 OO아파트 34평형</h3>
+                </div>
+                <div class="bg-[#f7f9fa] p-3.5 rounded-xl border border-[#e5e5e5] flex flex-col gap-1.5 text-xs">
+                  <div class="flex justify-between items-center"><span class="text-[#8c8c8c]">감정가</span><span class="font-semibold text-[#4a5568] line-through">6억 5,000만 원</span></div>
+                  <div class="flex justify-between items-center"><span class="text-[#8c8c8c]">최저입찰가</span><span class="font-semibold text-[#191c22]">4억 5,500만 원</span></div>
+                  <div class="flex justify-between items-center pt-1.5 border-t border-[#e5e5e5]"><span class="font-bold text-[#191c22]">최종 낙찰가</span><span class="font-extrabold text-[#03c75a] text-sm">5억 2,000만 원</span></div>
+                </div>
+                <div class="flex items-center justify-between text-xs pt-1 text-[#4a5568]">
+                  <span class="flex items-center gap-1 text-[#03a94d] font-semibold"><span class="material-symbols-outlined text-base">check_circle</span>선순위 임차인 전액배당 완료</span>
+                  <span class="text-[11px] text-[#8c8c8c]">명도 소요 28일</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+              <div class="h-56 bg-cover bg-center relative overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMCe77wbg1Ex2nbGx6OU0FAg8BLkDpsDqODvgu1aaIdJzR3sm65leBNDcvABdhs62xn5NaRpjmWA-t17gbukUXRmiJGwTZLi--NZ5AtBLYkm7h10f4wXq-ZKuepTnXpFPvwKA56ztWUJFEiUA9PaGFQQhwOVib0fF07LaVhJPdbyMetcUWXqT2I4YGNrUisJvFx_5kk1v_IW5NyezbO08uM1w4VsmOLCZxGoJ6qHdh');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute top-3.5 left-3.5 flex gap-2">
+                  <span class="bg-[#03c75a] text-white px-2.5 py-1 rounded-md text-xs font-bold shadow-sm">낙찰 완료</span>
+                  <span class="bg-white/90 backdrop-blur-sm text-[#0f2c59] px-2.5 py-1 rounded-md text-xs font-bold shadow-sm border border-white/40">1회 유찰</span>
+                </div>
+                <div class="absolute top-3.5 right-3.5">
+                  <span class="bg-[#ff4b4b] text-white px-2.5 py-1 rounded-md text-xs font-extrabold shadow-sm">8,500만 원 절감</span>
+                </div>
+                <div class="absolute bottom-3 left-4 right-4 text-white flex justify-between items-center">
+                  <span class="text-xs font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">storefront</span>수원지방법원 성남지원</span>
+                  <span class="text-xs font-bold text-[#67ff8d]">낙찰가율 77%</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-4 flex-1 justify-between">
+                <div class="flex flex-col gap-1.5">
+                  <span class="text-xs font-semibold text-[#0c43b7]">오피스텔 / 상가 · 수익형</span>
+                  <h3 class="text-base font-bold text-[#191c22] group-hover:text-[#03c75a] transition-colors leading-snug">경기 성남시 분당구 OO오피스텔</h3>
+                </div>
+                <div class="bg-[#f7f9fa] p-3.5 rounded-xl border border-[#e5e5e5] flex flex-col gap-1.5 text-xs">
+                  <div class="flex justify-between items-center"><span class="text-[#8c8c8c]">감정가</span><span class="font-semibold text-[#4a5568] line-through">3억 8,000만 원</span></div>
+                  <div class="flex justify-between items-center"><span class="text-[#8c8c8c]">최저입찰가</span><span class="font-semibold text-[#191c22]">2억 6,600만 원</span></div>
+                  <div class="flex justify-between items-center pt-1.5 border-t border-[#e5e5e5]"><span class="font-bold text-[#191c22]">최종 낙찰가</span><span class="font-extrabold text-[#03c75a] text-sm">2억 9,500만 원</span></div>
+                </div>
+                <div class="flex items-center justify-between text-xs pt-1 text-[#4a5568]">
+                  <span class="flex items-center gap-1 text-[#03a94d] font-semibold"><span class="material-symbols-outlined text-base">check_circle</span>상가 임대수익률 연 6.8% 달성</span>
+                  <span class="text-[11px] text-[#8c8c8c]">신속 명도 합의</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+              <div class="h-56 bg-cover bg-center relative overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPFntROTBJGTBWjo9w3QhoaHeF1ruLJb-3vkg6MEaSvwsjPI53DH4uL8bNlmVg2Vr3gigBlrTAddT_Goxv6qxwDw91dXd9fDzU72VRgmpNSFMAo27umaDCiLTouGgVVFhtBEGVlqoXvdfrcnZFUemFabjGmUOf1-bitMDIRKBi4OKjo_56z15qrAi_7JK6mq4ipq3fw-ruitrTZfBoTG9yH1-KOwI4c0uRY6jq2Ja8');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute top-3.5 left-3.5 flex gap-2">
+                  <span class="bg-[#03c75a] text-white px-2.5 py-1 rounded-md text-xs font-bold shadow-sm">낙찰 완료</span>
+                  <span class="bg-white/90 backdrop-blur-sm text-[#0f2c59] px-2.5 py-1 rounded-md text-xs font-bold shadow-sm border border-white/40">2회 유찰</span>
+                </div>
+                <div class="absolute top-3.5 right-3.5">
+                  <span class="bg-[#ff4b4b] text-white px-2.5 py-1 rounded-md text-xs font-extrabold shadow-sm">6,000만 원 절감</span>
+                </div>
+                <div class="absolute bottom-3 left-4 right-4 text-white flex justify-between items-center">
+                  <span class="text-xs font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">home</span>인천지방법원 본원</span>
+                  <span class="text-xs font-bold text-[#67ff8d]">낙찰가율 72%</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col gap-4 flex-1 justify-between">
+                <div class="flex flex-col gap-1.5">
+                  <span class="text-xs font-semibold text-[#0c43b7]">다세대 빌라 · 소액투자</span>
+                  <h3 class="text-base font-bold text-[#191c22] group-hover:text-[#03c75a] transition-colors leading-snug">인천 남동구 구월동 OO빌라</h3>
+                </div>
+                <div class="bg-[#f7f9fa] p-3.5 rounded-xl border border-[#e5e5e5] flex flex-col gap-1.5 text-xs">
+                  <div class="flex justify-between items-center"><span class="text-[#8c8c8c]">감정가</span><span class="font-semibold text-[#4a5568] line-through">2억 2,000만 원</span></div>
+                  <div class="flex justify-between items-center"><span class="text-[#8c8c8c]">최저입찰가</span><span class="font-semibold text-[#191c22]">1억 0,780만 원</span></div>
+                  <div class="flex justify-between items-center pt-1.5 border-t border-[#e5e5e5]"><span class="font-bold text-[#191c22]">최종 낙찰가</span><span class="font-extrabold text-[#03c75a] text-sm">1억 6,000만 원</span></div>
+                </div>
+                <div class="flex items-center justify-between text-xs pt-1 text-[#4a5568]">
+                  <span class="flex items-center gap-1 text-[#03a94d] font-semibold"><span class="material-symbols-outlined text-base">check_circle</span>소액 실투자금 4천만원대 완성</span>
+                  <span class="text-[11px] text-[#8c8c8c]">명도 인도 완료</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full py-20 bg-[#f7f9fa] px-4 sm:px-6 lg:px-8" id="consultation-form">
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-sm border border-[#e5e5e5] relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#03c75a]"></div>
+          <div class="flex flex-col items-center text-center gap-3 mb-8">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#e8f7ee] text-[#005321] text-xs font-bold">
+              <span class="w-2 h-2 rounded-full bg-[#03c75a]"></span>100% 비대면 유선(전화) 1:1 맞춤 무료 권리분석
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#191c22]">경매 물건 권리분석 및 매수대리 상담 예약</h2>
+            <p class="text-xs sm:text-sm text-[#4a5568] max-w-xl">방문 없이 유선으로 신속하게! 관심 있는 물건의 사건번호 또는 희망 지역을 남겨주시면 담당 컨설턴트가 1시간 내에 직접 전화드립니다.</p>
+          </div>
+          <form class="flex flex-col gap-5" onsubmit="event.preventDefault(); alert('1:1 전화 상담 신청이 정상 접수되었습니다. 담당 공인중개사가 빠른 시간 내에 등록하신 번호로 전화드리겠습니다.');">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div class="flex flex-col gap-1.5">
+                <label class="text-xs font-bold text-[#191c22]">성함 (고객명) *</label>
+                <input class="bg-[#f7f9fa] border border-[#e5e5e5] text-[#191c22] placeholder:text-[#8c8c8c] px-4 py-3.5 rounded-xl text-sm focus:outline-none focus:border-[#03c75a] focus:ring-1 focus:ring-[#03c75a] transition-all" placeholder="예: 홍길동" required="" type="text"/>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label class="text-xs font-bold text-[#191c22]">연락처 (휴대폰 번호) *</label>
+                <input class="bg-[#f7f9fa] border border-[#e5e5e5] text-[#191c22] placeholder:text-[#8c8c8c] px-4 py-3.5 rounded-xl text-sm focus:outline-none focus:border-[#03c75a] focus:ring-1 focus:ring-[#03c75a] transition-all" placeholder="010-0000-0000" required="" type="tel"/>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div class="flex flex-col gap-1.5">
+                <label class="text-xs font-bold text-[#191c22]">관심 지역</label>
+                <select class="bg-[#f7f9fa] border border-[#e5e5e5] text-[#191c22] px-4 py-3.5 rounded-xl text-sm focus:outline-none focus:border-[#03c75a] focus:ring-1 focus:ring-[#03c75a]">
+                  <option value="capital">서울/수도권 (서울, 경기, 인천 전지역)</option>
+                  <option value="metropolitan">부산/대구/대전/광주 (광역시권)</option>
+                  <option value="nationwide">기타 전국 지역</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label class="text-xs font-bold text-[#191c22]">물건 구분</label>
+                <select class="bg-[#f7f9fa] border border-[#e5e5e5] text-[#191c22] px-4 py-3.5 rounded-xl text-sm focus:outline-none focus:border-[#03c75a] focus:ring-1 focus:ring-[#03c75a]">
+                  <option value="apt">아파트</option>
+                  <option value="villa">다세대 / 빌라</option>
+                  <option value="officetel">오피스텔</option>
+                  <option value="commercial">상가 / 근린생활시설</option>
+                  <option value="land">토지 / 공장</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label class="text-xs font-bold text-[#191c22]">관심 사건번호 또는 문의사항</label>
+              <textarea class="bg-[#f7f9fa] border border-[#e5e5e5] text-[#191c22] placeholder:text-[#8c8c8c] px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-[#03c75a] focus:ring-1 focus:ring-[#03c75a] transition-all" placeholder="사건번호(예: 2023타경 12345) 또는 관심 예산, 선호 동네 등을 자유롭게 작성해주세요." rows="3"></textarea>
+            </div>
+            <div class="flex items-center gap-2.5 pt-1">
+              <input class="w-4 h-4 rounded text-[#03c75a] focus:ring-[#03c75a] accent-[#03c75a] border-[#e5e5e5]" id="privacy-agree" required="" type="checkbox"/>
+              <label class="text-xs text-[#4a5568] cursor-pointer" for="privacy-agree">개인정보 수집 및 유선 상담 전화 제공에 동의합니다. (상담 목적으로만 활용)</label>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <button class="flex-1 min-h-[44px] bg-[#03c75a] hover:bg-[#029e46] text-white py-4 rounded-xl font-bold text-base shadow-md shadow-[#03c75a]/25 transition-all flex items-center justify-center gap-2 hover:scale-[1.01]" type="submit">
+                <span class="material-symbols-outlined">send</span>
+                <span>무료 1:1 전화 상담 예약 신청</span>
+              </button>
+              <a class="min-h-[44px] bg-[#0f2c59] hover:bg-[#091b38] text-white px-6 py-4 rounded-xl font-bold text-base transition-all flex items-center justify-center gap-2" href="tel:032-462-7262">
+                <span class="material-symbols-outlined">phone_in_talk</span>
+                <span>직통전화 032-462-7262</span>
+              </a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="w-full bg-[#f4f6f8] border-t border-[#e5e5e5] py-12 text-[#4a5568] text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#e5e5e5]">
+        <div class="flex items-center gap-3">
+          <img src="profile.png" alt="플러스 공인중개사" class="w-8 h-8 rounded-full object-contain shadow-sm"/>
+          <span class="text-sm font-bold text-[#191c22]">플러스 공인중개사 사무소</span>
+          <span class="text-[#8c8c8c]">|</span>
+          <span class="font-semibold text-[#03a94d]">전국 경매컨설팅 · 매수대리 전문</span>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <span class="text-[#191c22]">대표 유선 상담 :</span>
+          <a class="text-[#03c75a] font-bold text-sm hover:underline" href="tel:032-462-7262">032-462-7262</a>
+          <span class="text-[#8c8c8c]">|</span>
+          <span class="text-[#4a5568]">100% 비대면 유선 1:1 전문상담</span>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-[#8c8c8c] text-[11px]">
+        <div class="flex flex-col gap-1">
+          <p>상호: 플러스 공인중개사 사무소 · 법원 경매 매수신청대리 등록 공인중개사</p>
+          <p>분야: 전국 부동산 법원경매 매수대리, 권리분석, 현장조사 및 입찰대리, 명도 협의</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a id="agent-login-btn" href="admin.html" class="text-gray-400 hover:text-gray-600 transition-colors">Agent Login</a>
+          <p class="font-medium text-[#4a5568]">© Plus Real Estate Auction Consulting. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-[#e5e5e5] z-50 flex items-center justify-around py-2 px-3 shadow-lg">
+    <a href="index.html" class="flex flex-col items-center gap-1 text-[#03c75a] text-xs font-semibold py-1">
+      <span class="material-symbols-outlined text-xl">home</span>
+      <span>홈</span>
+    </a>
+    <a href="news.html" class="flex flex-col items-center gap-1 text-gray-500 hover:text-[#03c75a] text-xs font-semibold py-1">
+      <span class="material-symbols-outlined text-xl">newspaper</span>
+      <span>경매소식</span>
+    </a>
+    <a href="tel:032-462-7262" class="flex flex-col items-center gap-1 text-gray-500 hover:text-[#03c75a] text-xs font-semibold py-1">
+      <span class="material-symbols-outlined text-xl">call</span>
+      <span>전화상담</span>
+    </a>
+    <a href="admin.html" class="flex flex-col items-center gap-1 text-gray-500 hover:text-[#03c75a] text-xs font-semibold py-1">
+      <span class="material-symbols-outlined text-xl">lock</span>
+      <span>관리자</span>
+    </a>
+  </nav>
+
+  <script src="db.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const previewSection = document.getElementById('board-preview');
+      const cardsContainer = document.getElementById('preview-cards-container');
+      try {
+        const posts = await getPosts();
+        if (!posts || posts.length === 0) {
+          previewSection.style.display = 'none';
+          return;
+        }
+
+        const top3 = posts.slice(0, 3);
+        cardsContainer.innerHTML = top3.map(post => {
+          const summary = markdownToText(post.content || '').slice(0, 60) + '...';
+          const categoryName = post.category_name || (post.category === 'market' ? '시장 동향' : post.category === 'column' ? '권리분석 칼럼' : '경매 뉴스');
+          const thumb = post.image || 'profile.png';
+          return `
+            <a href="news-detail.html?id=${post.id}" class="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+              <div class="h-44 bg-cover bg-center relative overflow-hidden bg-gray-100">
+                <img src="${thumb}" alt="${escapeHtml(post.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+                <span class="absolute top-3 left-3 bg-[#03c75a] text-white text-xs font-bold px-2.5 py-1 rounded shadow-sm">${escapeHtml(categoryName)}</span>
+              </div>
+              <div class="p-5 flex flex-col justify-between flex-1 gap-3">
+                <div>
+                  <h3 class="text-base font-bold text-[#191c22] group-hover:text-[#03c75a] transition-colors line-clamp-2 leading-snug">${escapeHtml(post.title)}</h3>
+                  <p class="text-xs text-[#4a5568] mt-2 line-clamp-2 leading-relaxed">${escapeHtml(summary)}</p>
+                </div>
+                <div class="pt-3 border-t border-[#e5e5e5] flex items-center justify-between text-[11px] text-[#8c8c8c]">
+                  <span>${post.created_at || ''}</span>
+                  <span class="text-[#03c75a] font-semibold flex items-center gap-0.5">상세보기 <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+                </div>
+              </div>
+            </a>
+          `;
+        }).join('');
+        previewSection.style.display = 'block';
+      } catch (e) {
+        previewSection.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

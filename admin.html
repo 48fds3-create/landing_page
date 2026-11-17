@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>관리자 대시보드 | 플러스 공인중개사 사무소</title>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "naver-green": "#03c75a",
+            "naver-green-dark": "#02b150",
+            "naver-green-light": "#e8f7ee",
+            "portal-ink": "#1c1c1c",
+            "portal-border": "#e4e8eb"
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif]
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-[#f7f9fa] text-portal-ink font-sans min-h-screen">
+  <div id="login-section" class="hidden min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl border border-portal-border p-8 sm:p-10 shadow-lg max-w-md w-full">
+      <div class="flex flex-col items-center text-center gap-2 mb-8">
+        <div class="w-14 h-14 rounded-2xl bg-naver-green flex items-center justify-center text-white mb-2 shadow-sm">
+          <span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
+        </div>
+        <h2 class="text-2xl font-extrabold text-portal-ink">관리자 로그인</h2>
+        <p class="text-xs text-gray-500">플러스 공인중개사 관리자 전용 페이지입니다.</p>
+      </div>
+
+      <form id="login-form" class="flex flex-col gap-4">
+        <div class="flex flex-col gap-1.5">
+          <label class="text-xs font-bold text-portal-ink">관리자 비밀번호</label>
+          <input id="admin-password" type="password" required placeholder="비밀번호를 입력하세요" class="bg-[#f7f9fa] border border-portal-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-naver-green focus:ring-1 focus:ring-naver-green transition-all"/>
+        </div>
+        <div id="login-error" class="hidden text-xs text-red-600 font-semibold mt-1">비밀번호가 올바르지 않습니다.</div>
+        <button type="submit" class="min-h-[44px] bg-naver-green hover:bg-naver-green-dark text-white py-3.5 rounded-xl font-bold text-sm shadow-sm transition-all mt-2">
+          로그인
+        </button>
+      </form>
+
+      <div class="text-center mt-6">
+        <a href="index.html" class="text-xs text-gray-500 hover:text-portal-ink inline-flex items-center gap-1">
+          <span class="material-symbols-outlined text-sm">arrow_back</span> 홈으로 돌아가기
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="dashboard-section" class="hidden min-h-screen flex flex-col">
+    <header class="bg-white border-b border-portal-border sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img src="profile.png" alt="로고" class="w-9 h-9 rounded-full object-contain shadow-sm"/>
+          <span class="font-bold text-lg text-portal-ink">게시글 관리 대시보드</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="min-h-[44px] text-xs font-semibold text-gray-600 hover:text-portal-ink px-3 py-2 rounded-lg hover:bg-gray-100 hidden sm:inline-flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">home</span>웹사이트 홈
+          </a>
+          <a href="news-write.html" class="min-h-[44px] bg-naver-green hover:bg-naver-green-dark text-white px-4 py-2 rounded-lg font-bold text-xs shadow-sm transition-all inline-flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base">edit</span>
+            <span>새 글 작성</span>
+          </a>
+          <button id="logout-btn" class="min-h-[44px] border border-portal-border bg-white hover:bg-gray-50 text-gray-700 px-3 py-2 rounded-lg text-xs font-semibold inline-flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">logout</span>
+            <span>로그아웃</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
+      <div class="bg-white rounded-2xl border border-portal-border shadow-sm overflow-hidden">
+        <div class="p-6 border-b border-portal-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-bold text-portal-ink">게시글 관리</h2>
+            <p class="text-xs text-gray-500 mt-1">등록된 게시글을 수정하거나 삭제하고 새 글을 작성할 수 있습니다.</p>
+          </div>
+          <div class="text-xs text-gray-500">
+            총 게시글: <span id="total-count" class="font-bold text-naver-green">0</span>개
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-gray-600">
+            <thead class="bg-[#f7f9fa] text-xs uppercase text-gray-500 border-b border-portal-border">
+              <tr>
+                <th scope="col" class="px-6 py-3.5 w-16 text-center">번호</th>
+                <th scope="col" class="px-6 py-3.5 w-36">카테고리</th>
+                <th scope="col" class="px-6 py-3.5">제목</th>
+                <th scope="col" class="px-6 py-3.5 w-32 text-center">작성일</th>
+                <th scope="col" class="px-6 py-3.5 w-36 text-center">관리</th>
+              </tr>
+            </thead>
+            <tbody id="posts-table-body" class="divide-y divide-portal-border"></tbody>
+          </table>
+        </div>
+
+        <div id="empty-state" class="hidden p-12 text-center text-gray-500">
+          <span class="material-symbols-outlined text-4xl text-gray-300 mb-2">article</span>
+          <p class="text-sm font-semibold">작성된 게시글이 없습니다.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="db.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const loginSection = document.getElementById('login-section');
+      const dashboardSection = document.getElementById('dashboard-section');
+
+      if (!isAdmin()) {
+        loginSection.classList.remove('hidden');
+        setupLoginForm();
+      } else {
+        dashboardSection.classList.remove('hidden');
+        setupDashboard();
+      }
+    });
+
+    function setupLoginForm() {
+      const form = document.getElementById('login-form');
+      const errBox = document.getElementById('login-error');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        errBox.classList.add('hidden');
+
+        const inputPw = document.getElementById('admin-password').value.trim();
+        const config = await loadConfig();
+        const correctPw = config.admin_password || 'admin1234';
+
+        if (inputPw === correctPw) {
+          sessionStorage.setItem('isAdmin', 'true');
+          window.location.reload();
+        } else {
+          errBox.classList.remove('hidden');
+        }
+      });
+    }
+
+    async function setupDashboard() {
+      document.getElementById('logout-btn').addEventListener('click', () => {
+        sessionStorage.removeItem('isAdmin');
+        window.location.reload();
+      });
+
+      await loadAndRenderPosts();
+    }
+
+    async function loadAndRenderPosts() {
+      const tbody = document.getElementById('posts-table-body');
+      const emptyState = document.getElementById('empty-state');
+      const totalCount = document.getElementById('total-count');
+
+      const posts = await getPosts();
+      totalCount.innerText = posts.length;
+
+      if (!posts || posts.length === 0) {
+        tbody.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      tbody.innerHTML = posts.map((post, idx) => {
+        const catName = post.category_name || (post.category === 'market' ? '시장 동향' : post.category === 'column' ? '권리분석 칼럼' : post.category === 'faq' ? 'FAQ' : '경매 뉴스');
+        return `
+          <tr class="hover:bg-gray-50 transition-colors">
+            <td class="px-6 py-4 text-center font-medium text-gray-400 text-xs">${posts.length - idx}</td>
+            <td class="px-6 py-4">
+              <span class="inline-block bg-naver-green-light text-naver-green text-xs font-semibold px-2 py-0.5 rounded">
+                ${escapeHtml(catName)}
+              </span>
+            </td>
+            <td class="px-6 py-4 font-semibold text-portal-ink">
+              <a href="news-detail.html?id=${post.id}" target="_blank" class="hover:text-naver-green transition-colors">
+                ${escapeHtml(post.title)}
+              </a>
+            </td>
+            <td class="px-6 py-4 text-center text-xs text-gray-500">${post.created_at || ''}</td>
+            <td class="px-6 py-4 text-center">
+              <div class="inline-flex items-center gap-1.5">
+                <a href="news-write.html?id=${post.id}" class="min-h-[44px] px-2.5 py-1 text-xs font-bold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg inline-flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm">edit</span>수정
+                </a>
+                <button onclick="handleDeletePost('${post.id}')" class="min-h-[44px] px-2.5 py-1 text-xs font-bold text-red-600 bg-red-50 hover:bg-red-100 rounded-lg inline-flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-sm">delete</span>삭제
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    async function handleDeletePost(id) {
+      if (confirm('게시글을 삭제하시겠습니까? 삭제 후에는 복구할 수 없습니다.')) {
+        try {
+          await deletePost(id);
+          alert('게시글이 삭제되었습니다.');
+          await loadAndRenderPosts();
+        } catch (e) {
+          alert('삭제 실패: ' + e.message);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
