@@ -348,3 +348,164 @@ async function syncPostsToGithub(posts, config) {
     throw new Error(errData.message || 'GitHub 동기화 실패');
   }
 }
+
+async function getInquiries() {
+  const local = localStorage.getItem('inquiries_cache');
+  if (local) {
+    try {
+      const parsed = JSON.parse(local);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        fetchInquiriesFromRemote().catch(() => {});
+        return parsed;
+      }
+    } catch (e) {}
+  }
+  return await fetchInquiriesFromRemote();
+}
+
+async function fetchInquiriesFromRemote() {
+  const config = await loadConfig();
+  const token = (config.github_token || '').replace(/\s+/g, '');
+  const owner = config.github_owner;
+  const repo = config.github_repo;
+  const path = 'data/inquiries.json';
+
+  if (token && token !== 'YOUR_GITHUB_TOKEN' && owner && repo) {
+    try {
+      const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+      const res = await fetch(url, {
+        headers: {
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const contentStr = decodeURIComponent(escape(atob(data.content.replace(/\s/g, ''))));
+        const inquiries = JSON.parse(contentStr);
+        localStorage.setItem('inquiries_cache', JSON.stringify(inquiries));
+        localStorage.setItem('inquiries_sha', data.sha);
+        return inquiries;
+      }
+    } catch (e) {}
+  }
+
+  try {
+    const res = await fetch(path + '?t=' + Date.now());
+    if (res.ok) {
+      const inquiries = await res.json();
+      localStorage.setItem('inquiries_cache', JSON.stringify(inquiries));
+      return inquiries;
+    }
+  } catch (e) {}
+
+  return [];
+}
+
+async function saveInquiry(inquiry) {
+  const config = await loadConfig();
+  let inquiries = await getInquiries();
+
+  const now = new Date();
+  const kstTime = new Date(now.getTime() + 9 * 60 * 60 * 1000)
+    .toISOString()
+    .replace('T', ' ')
+    .substring(0, 19);
+
+  const newId = Date.now().toString();
+  const newEntry = {
+    ...inquiry,
+    id: newId,
+    status: inquiry.status || 'pending',
+    created_at: kstTime
+  };
+
+  inquiries.unshift(newEntry);
+  localStorage.setItem('inquiries_cache', JSON.stringify(inquiries));
+
+  try {
+    await syncInquiriesToGithub(inquiries, config);
+  } catch (e) {
+    console.warn('Inquiry remote sync failed, saved locally:', e);
+  }
+
+  return newEntry;
+}
+
+async function updateInquiryStatus(id, newStatus) {
+  const config = await loadConfig();
+  let inquiries = await getInquiries();
+  const target = inquiries.find(item => String(item.id) === String(id));
+  if (target) {
+    target.status = newStatus;
+    localStorage.setItem('inquiries_cache', JSON.stringify(inquiries));
+    await syncInquiriesToGithub(inquiries, config);
+  }
+  return inquiries;
+}
+
+async function deleteInquiry(id) {
+  const config = await loadConfig();
+  let inquiries = await getInquiries();
+  inquiries = inquiries.filter(item => String(item.id) !== String(id));
+  localStorage.setItem('inquiries_cache', JSON.stringify(inquiries));
+  await syncInquiriesToGithub(inquiries, config);
+  return inquiries;
+}
+
+async function syncInquiriesToGithub(inquiries, config) {
+  const token = (config.github_token || '').replace(/\s+/g, '');
+  const owner = config.github_owner;
+  const repo = config.github_repo;
+  const path = 'data/inquiries.json';
+
+  if (!token || token === 'YOUR_GITHUB_TOKEN' || !owner || !repo) {
+    return false;
+  }
+
+  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  let sha = localStorage.getItem('inquiries_sha') || '';
+
+  try {
+    const checkRes = await fetch(url, {
+      headers: {
+        'Authorization': `token ${token}`,
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    });
+    if (checkRes.ok) {
+      const existing = await checkRes.json();
+      sha = existing.sha;
+    }
+  } catch (e) {}
+
+  const jsonStr = JSON.stringify(inquiries, null, 2);
+  const utf8Base64 = btoa(unescape(encodeURIComponent(jsonStr)));
+
+  const payload = {
+    message: 'feat(inquiry): update inquiries',
+    content: utf8Base64
+  };
+  if (sha) payload.sha = sha;
+
+  const putRes = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (putRes.ok) {
+    const resData = await putRes.json();
+    if (resData.content && resData.content.sha) {
+      localStorage.setItem('inquiries_sha', resData.content.sha);
+    }
+    return true;
+  } else {
+    const errData = await putRes.json().catch(() => ({}));
+    throw new Error(errData.message || 'GitHub 동기화 실패');
+  }
+}
